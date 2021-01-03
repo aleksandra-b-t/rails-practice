@@ -6,8 +6,9 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
-  <%= @picture.url %>
+  <!-- <strong>Url:</strong> -->
+  <!-- <%= @picture.url %> -->
+  <%= image_tag image_url(@picture.url) %>
 </p>
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
