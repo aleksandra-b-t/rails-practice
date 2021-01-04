@@ -13,13 +13,13 @@
 
   <tbody>
     <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.name %></td>
-        <td><%= picture.url %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <ul>
+        <h2><%= picture.name %></h2>
+        <ul><%= image_tag image_url(picture.url) %></ul>
+        <p><%= link_to 'Show', picture %></p>
+        <p><%= link_to 'Edit', edit_picture_path(picture) %></p>
+        <p><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %><p>
+      </ul>
     <% end %>
   </tbody>
 </table>
